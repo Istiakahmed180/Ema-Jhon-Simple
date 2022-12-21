@@ -1,0 +1,27 @@
+.header {
+  height: 60px;
+  background-color: #1c2b35;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 112px 0 112px;
+}
+
+.header img {
+  width: 140px;
+  height: 40px;
+}
+
+.header li a {
+  text-decoration: none;
+  color: #ffff;
+  margin-left: 32px;
+}
+
+.header li {
+  list-style-type: none;
+}
+
+.header li a:hover {
+  color: orange;
+}

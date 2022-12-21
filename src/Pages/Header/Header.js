@@ -1,0 +1,18 @@
+import React from "react";
+import logo from "../../images/Logo.svg";
+import "./Header.css";
+
+const Header = () => {
+  return (
+    <nav className="header">
+      <img src={logo} alt="" />
+      <li>
+        <a href="order-review">Order Review</a>
+        <a href="/manage-inventory">Manage Inventory</a>
+        <a href="/login">Login</a>
+      </li>
+    </nav>
+  );
+};
+
+export default Header;
