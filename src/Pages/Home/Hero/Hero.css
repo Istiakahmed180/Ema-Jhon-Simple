@@ -1,0 +1,46 @@
+.hero-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 140px;
+}
+
+.right-side {
+  margin: 0 auto;
+  position: relative;
+  background-color: #ff9900;
+  width: 370px;
+  height: 400px;
+  border-radius: 8px;
+}
+.right-side img {
+  width: 370px;
+  height: 400px;
+  border-radius: 8px;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.sale {
+  color: orange;
+  font-weight: bold;
+  margin-bottom: 61px;
+}
+
+.discover {
+  margin-bottom: 78px;
+}
+
+.left-side {
+  margin: 0 auto;
+}
+
+.left-side button {
+  background-color: #ff9900;
+  border: none;
+  border-radius: 4px;
+  width: 180px;
+  height: 56px;
+  font-size: 20px;
+  cursor: pointer;
+}
