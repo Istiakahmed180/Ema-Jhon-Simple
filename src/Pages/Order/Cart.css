@@ -1,6 +1,7 @@
 .cart {
   background-color: #ffe0b2;
-  position: static;
+  position: sticky;
+  top: 0;
 }
 
 .order-summary {
@@ -12,11 +13,13 @@
   font-size: 19px;
   margin-left: 20px;
   margin-top: 40px;
+  font-weight: 500;
 }
 .grand-total {
   font-size: 20px;
   margin-top: 10px;
   text-align: center;
+  font-weight: 600;
 }
 .cart-button1 {
   display: flex;
@@ -51,4 +54,7 @@
 .cart-button1 span,
 .cart-button2 span {
   margin-right: 6px;
+}
+.grand-totals {
+  color: orangered;
 }

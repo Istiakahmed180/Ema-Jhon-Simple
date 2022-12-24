@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { addToDb } from "../../utilities/fakedb";
 import Cart from "./Cart";
 import "./Order.css";
 import Product from "./Product";
@@ -9,6 +10,7 @@ const Order = () => {
 
   const HandleAddToCart = (product) => {
     setCart([...cart, product]);
+    addToDb(product.id);
   };
 
   useEffect(() => {
