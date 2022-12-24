@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
+import Cart from "./Cart";
 import "./Order.css";
 import Product from "./Product";
 
 const Order = () => {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  const HandleAddToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
   useEffect(() => {
     fetch("products.json")
@@ -15,11 +21,15 @@ const Order = () => {
     <div className="order">
       <div className="products">
         {products.map((product) => (
-          <Product key={product.id} product={product}></Product>
+          <Product
+            key={product.id}
+            product={product}
+            HandleAddToCart={HandleAddToCart}
+          ></Product>
         ))}
       </div>
       <div className="cart">
-        <h1>This Is Cart</h1>
+        <Cart cart={cart}></Cart>
       </div>
     </div>
   );
