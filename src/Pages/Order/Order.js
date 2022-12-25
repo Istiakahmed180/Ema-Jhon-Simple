@@ -14,24 +14,35 @@ const Order = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  const HandleAddToCart = (selectedProduct) => {
+    let newCart = [];
+    const exits = cart.find((product) => product.id === selectedProduct.id);
+    if (!exits) {
+      selectedProduct.quantity = 1;
+      newCart = [...cart, selectedProduct];
+    } else {
+      const rest = cart.filter((product) => product.id !== selectedProduct.id);
+      exits.quantity = exits.quantity + 1;
+      newCart = [...rest, exits];
+    }
+    setCart(newCart);
+    addToDb(selectedProduct.id);
+  };
+
   useEffect(() => {
-    const getProduct = getStoredCart();
+    const storedCart = getStoredCart();
     const savedCart = [];
-    for (const id in getProduct) {
+    for (const id in storedCart) {
       const addedProduct = products.find((product) => product.id === id);
       if (addedProduct) {
-        const quantity = getProduct[id];
+        const quantity = storedCart[id];
         addedProduct.quantity = quantity;
+
         savedCart.push(addedProduct);
       }
-      setCart(savedCart);
     }
+    setCart(savedCart);
   }, [products]);
-
-  const HandleAddToCart = (product) => {
-    setCart([...cart, product]);
-    addToDb(product.id);
-  };
 
   return (
     <div className="order">

@@ -6,9 +6,11 @@ import { FaArrowRight } from "react-icons/fa";
 const Cart = ({ cart }) => {
   let total = 0;
   let shipping = 0;
+  let quantity = 0;
   for (const product of cart) {
-    total = total + product.price;
-    shipping = shipping + product.shipping;
+    quantity = quantity + product.quantity;
+    total = total + product.price * product.quantity;
+    shipping = shipping + product.shipping * product.quantity;
   }
   const tax = total * 0.1;
   const grandTotal = total + shipping + tax;
@@ -18,7 +20,7 @@ const Cart = ({ cart }) => {
       <h3 className="order-summary">Order Summary</h3>
       <div className="order-info">
         <p>
-          <small>Selected Items: {cart.length}</small>
+          <small>Selected Items: {quantity}</small>
         </p>
         <p>
           <small>Total Price: ${total}</small>
