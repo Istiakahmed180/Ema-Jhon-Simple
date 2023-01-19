@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { addToDb, getStoredCart } from "../../utilities/fakedb";
+import { addToDb } from "../../utilities/fakedb";
 import Cart from "./Cart";
 import "./Order.css";
 import Product from "./Product";
 
 const Order = () => {
   const [cart, setCart] = useState([]);
-  const products = useLoaderData();
+  const { products, savedCart } = useLoaderData();
 
   const HandleAddToCart = (selectedProduct) => {
     let newCart = [];
@@ -25,19 +25,8 @@ const Order = () => {
   };
 
   useEffect(() => {
-    const storedCart = getStoredCart();
-    const savedCart = [];
-    for (const id in storedCart) {
-      const addedProduct = products.find((product) => product.id === id);
-      if (addedProduct) {
-        const quantity = storedCart[id];
-        addedProduct.quantity = quantity;
-
-        savedCart.push(addedProduct);
-      }
-    }
     setCart(savedCart);
-  }, [products]);
+  }, []);
 
   return (
     <div className="order">

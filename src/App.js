@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home/Home";
 import ManageInventory from "./Pages/Invertory/ManageInventory";
 import Order from "./Pages/Order/Order";
 import OrderReview from "./Pages/Order/OrderReview";
+import { productsAndCartLoder } from "./utilities/ProductsAndCartLoader";
 
 const router = createBrowserRouter([
   {
@@ -18,12 +19,12 @@ const router = createBrowserRouter([
       {
         path: "/order",
         element: <Order></Order>,
-        loader: () => fetch("products.json"),
+        loader: productsAndCartLoder,
       },
       {
         path: "/order-review",
         element: <OrderReview></OrderReview>,
-        loader: () => fetch("products.json"),
+        loader: productsAndCartLoder,
       },
       {
         path: "/manage-inventory",
