@@ -18,10 +18,12 @@ const router = createBrowserRouter([
       {
         path: "/order",
         element: <Order></Order>,
+        loader: () => fetch("products.json"),
       },
       {
         path: "/order-review",
         element: <OrderReview></OrderReview>,
+        loader: () => fetch("products.json"),
       },
       {
         path: "/manage-inventory",
