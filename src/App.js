@@ -2,7 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Main from "./Layout/Main";
 import Home from "./Pages/Home/Home/Home";
+import ManageInventory from "./Pages/Invertory/ManageInventory";
 import Order from "./Pages/Order/Order";
+import OrderReview from "./Pages/Order/OrderReview";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
       {
         path: "/order",
         element: <Order></Order>,
+      },
+      {
+        path: "/order-review",
+        element: <OrderReview></OrderReview>,
+      },
+      {
+        path: "/manage-inventory",
+        element: <ManageInventory></ManageInventory>,
       },
     ],
   },
