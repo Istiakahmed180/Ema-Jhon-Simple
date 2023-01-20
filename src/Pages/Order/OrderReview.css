@@ -1,0 +1,13 @@
+.review-products {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.review-cart {
+  margin-right: 130px;
+  position: fixed;
+  left: 850px;
+  margin-top: 80px;
+  width: 351px;
+  height: 1000px;
+}

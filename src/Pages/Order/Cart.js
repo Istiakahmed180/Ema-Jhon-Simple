@@ -2,8 +2,9 @@ import React from "react";
 import "./Cart.css";
 import { FaRecycle } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleClearCart }) => {
   let total = 0;
   let shipping = 0;
   let quantity = 0;
@@ -38,14 +39,16 @@ const Cart = ({ cart }) => {
       </p>
 
       <div className="cart-button1">
-        <button>
+        <button onClick={handleClearCart}>
           <span>Clear Cart</span> <FaRecycle></FaRecycle>
         </button>
       </div>
       <div className="cart-button2">
-        <button>
-          <span>Review Order</span> <FaArrowRight></FaArrowRight>
-        </button>
+        <Link to="/order-review">
+          <button>
+            <span>Review Order</span> <FaArrowRight></FaArrowRight>
+          </button>
+        </Link>
       </div>
     </div>
   );

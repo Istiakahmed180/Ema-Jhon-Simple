@@ -1,0 +1,48 @@
+.review {
+  width: 600px;
+  height: 107px;
+  display: flex;
+  border: 1px solid #95a0a7;
+  margin-left: 150px;
+  margin-top: 21px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.review > :nth-child(1) {
+  width: 91px;
+  height: 91px;
+  border-radius: 6px;
+}
+
+.review > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 17px;
+  width: 600px;
+}
+
+.icon-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(235, 87, 87, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-btn:hover {
+  background: rgba(235, 87, 87, 0.5);
+}
+
+.delete-icon {
+  width: 27.5px;
+  height: 31.43px;
+  color: #eb5757;
+}
+
+.price {
+  color: #ff9900;
+}
