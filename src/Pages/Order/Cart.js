@@ -44,9 +44,9 @@ const Cart = ({ cart, handleClearCart }) => {
         </button>
       </div>
       <div className="cart-button2">
-        <Link to="/order-review">
+        <Link to="/shipping">
           <button>
-            <span>Review Order</span> <FaArrowRight></FaArrowRight>
+            <span>Proceed Shipping</span> <FaArrowRight></FaArrowRight>
           </button>
         </Link>
       </div>

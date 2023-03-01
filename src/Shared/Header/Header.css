@@ -25,3 +25,14 @@
 .header li a:hover {
   color: orange;
 }
+
+.logout-button {
+  margin-left: 20px;
+  background-color: #fcd191;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(94, 83, 83);
+  font-weight: bold;
+  cursor: pointer;
+}

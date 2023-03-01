@@ -1,0 +1,129 @@
+.signup-form-container {
+  width: 500px;
+  height: 700px;
+  background-color: #ffffff;
+  border: 1px solid #95a0a7;
+  border-radius: 8px;
+  margin: 128px auto 128px auto;
+  z-index: 10;
+}
+
+.signup-form-title {
+  text-align: center;
+  margin-top: 38px;
+  color: #2a414f;
+  font-weight: 600;
+  margin-bottom: 29px;
+}
+
+.signup-form-control {
+  width: 415px;
+  height: 84px;
+  margin: 0 auto;
+}
+
+.signup-form-control label {
+  display: block;
+  font-size: 17px;
+  color: #2a414f;
+  margin-bottom: 9px;
+  margin-left: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.signup-form-control input {
+  width: 415px;
+  box-sizing: border-box;
+  width: 415px;
+  height: 55px;
+  border: 1px solid #95a0a7;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
+.signup-btn {
+  width: 415px;
+  height: 55px;
+  margin-left: 2.5rem;
+  margin-top: 44px;
+  background: rgba(255, 153, 0, 0.3);
+  border-radius: 5px;
+  border: none;
+  font-size: 21px;
+  color: #0e161a;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-control {
+  text-align: center;
+  margin-top: 9px;
+  font-size: 15px;
+}
+
+.login-link {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.hr-control {
+  display: flex;
+}
+
+.signup-form-container hr {
+  width: 354px;
+  margin: 0 auto;
+  border: 1px solid #95a0a7;
+  margin-top: 41px;
+}
+
+.signup-google-login {
+  width: 415px;
+  height: 55px;
+  border: 1px solid #95a0a7;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-google-login p {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.signup-container {
+  position: relative;
+}
+
+.signup-outside-div {
+  width: 500px;
+  height: 700px;
+  background: #ffe0b3;
+  border-radius: 8px;
+  position: absolute;
+  z-index: -10;
+  left: 30%;
+  top: 3%;
+}
+
+.signup-error {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  color: rgb(158, 87, 87);
+}

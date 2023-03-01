@@ -3,8 +3,12 @@ import "./App.css";
 import Main from "./Layout/Main";
 import Home from "./Pages/Home/Home/Home";
 import ManageInventory from "./Pages/Invertory/ManageInventory";
+import Login from "./Pages/Login/Login";
 import Order from "./Pages/Order/Order";
 import OrderReview from "./Pages/Order/OrderReview";
+import Shipping from "./Pages/Shipping/Shipping";
+import SginUp from "./Pages/SignUp/SginUp";
+import PrivateRoute from "./Routes/PrivateRoute";
 import { productsAndCartLoder } from "./utilities/ProductsAndCartLoader";
 
 const router = createBrowserRouter([
@@ -28,7 +32,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/manage-inventory",
-        element: <ManageInventory></ManageInventory>,
+        element: (
+          <PrivateRoute>
+            <ManageInventory></ManageInventory>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SginUp></SginUp>,
+      },
+      {
+        path: "/shipping",
+        element: (
+          <PrivateRoute>
+            <Shipping></Shipping>
+          </PrivateRoute>
+        ),
       },
     ],
   },
