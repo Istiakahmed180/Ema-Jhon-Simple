@@ -11,4 +11,4 @@ This site has been created by using shopping related API Data. And user experien
 
 ## Ema John Live
 
-https://ema-jhon-product.netlify.app/
+https://ema-john-simple-5b2fc.web.app
